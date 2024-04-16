@@ -21,6 +21,10 @@
 }
 .background-menu.about{
     background-image: url(image/burger-banner3.jpg);
+}
+.background-menu.news{
+    background-image: url(image/burger-banner4.jpg);
+    height: 85vh;
 
 }
 .box-screen-index{
