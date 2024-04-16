@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>返回頂部按鈕</title>
+    <style>
+        #scrollToTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+}
+div{
+    width: 100%;
+    height: 3000px;
+    background-color: #eee;
+}
+
+#scrollToTopBtn:hover {
+    background-color: #555;
+}
+    .div2{
+        width: 100%;
+    height: 3000px;
+    background-color: red;
+    }
+    </style>
+</head>
+<body>
+    <div>.</div>
+    <div class="div2">.</div>
+
+    <button onclick="scrollToTop()" id="scrollToTopBtn" title="返回頂部">Top</button>
+    
+
+    <script>
+        // When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {
+    scrollFunction();
+};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("scrollToTopBtn").style.display = "block";
+    } else {
+        document.getElementById("scrollToTopBtn").style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document with smooth animation
+function scrollToTop() {
+    const scrollDuration = 1000; // Duration of the scroll animation in milliseconds
+
+    const scrollStep = -window.scrollY / (scrollDuration / 15);
+    const scrollInterval = setInterval(function(){
+        if (window.scrollY !== 0) {
+            window.scrollBy(0, scrollStep);
+        } else {
+            clearInterval(scrollInterval);
+        }
+    },15);
+}
+
+
+    </script>
+</body>
+</html>

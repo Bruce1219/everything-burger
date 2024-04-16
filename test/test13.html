@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>點餐功能</title>
+    <style>
+        /* CSS樣式 */
+        .menu-item {
+            display: inline-block;
+            margin: 10px;
+        }
+        .menu-item img {
+            width: 100px;
+            height: 100px;
+            display: block;
+            margin-bottom: 5px;
+        }
+        #selected-items {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>漢堡點餐功能</h1>
+
+    <h2>選擇餐點：</h2>
+    <div class="menu-item">
+        <h3>麵包：</h3>
+        <input type="radio" name="bread" value="white" id="white-bread"> <label for="white-bread"><img src="white_bread.jpg" alt="白麵包"> 白麵包</label><br>
+        <input type="radio" name="bread" value="wholegrain" id="wholegrain-bread"> <label for="wholegrain-bread"><img src="wholegrain_bread.jpg" alt="全麥麵包"> 全麥麵包</label><br>
+    </div>
+
+    <div class="menu-item">
+        <h3>肉料：</h3>
+        <input type="checkbox" name="meat" value="beef" id="beef-meat"> <label for="beef-meat"><img src="beef.jpg" alt="牛肉"> 牛肉</label><br>
+        <input type="checkbox" name="meat" value="chicken" id="chicken-meat"> <label for="chicken-meat"><img src="chicken.jpg" alt="雞肉"> 雞肉</label><br>
+    </div>
+
+    <div class="menu-item">
+        <h3>配料：</h3>
+        <input type="checkbox" name="topping" value="lettuce" id="lettuce-topping"> <label for="lettuce-topping"><img src="lettuce.jpg" alt="生菜"> 生菜</label><br>
+        <input type="checkbox" name="topping" value="tomato" id="tomato-topping"> <label for="tomato-topping"><img src="tomato.jpg" alt="番茄"> 番茄</label><br>
+    </div>
+
+    <div class="menu-item">
+        <h3>醬汁：</h3>
+        <select name="sauce" id="sauce-select">
+            <option value="mayo">美乃滋</option>
+            <option value="mustard">芥末</option>
+            <option value="ketchup">番茄醬</option>
+        </select>
+    </div>
+
+    <h2>已選項目：</h2>
+    <div id="selected-items"></div>
+
+    <button onclick="addToCart()">加入購物車</button>
+
+    <script>
+        // JavaScript代碼
+        function addToCart() {
+            var selectedItems = document.querySelectorAll('input[type="radio"]:checked, input[type="checkbox"]:checked, select');
+            var selectedItemList = '';
+
+            selectedItems.forEach(function(item) {
+                selectedItemList += item.nextSibling.textContent.trim() + ', ';
+            });
+
+            // 去掉最後的逗號和空格
+            selectedItemList = selectedItemList.slice(0, -2);
+
+            // 在已選項目區域顯示已選項目
+            document.getElementById('selected-items').textContent = selectedItemList;
+        }
+    </script>
+</body>
+</html>

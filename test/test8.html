@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scrolling Navbar Color Change</title>
+<style>
+  /* 初始导航栏样式 */
+  .navbar {
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+  }
+  
+  /* 滚动后的导航栏样式 */
+  .navbar.scrolled {
+    background-color: #333; /* 修改为你想要的滚动后的颜色 */
+  }
+  
+  /* 示例内容样式 */
+  .content {
+    height: 2000px; /* 用于撑开页面高度，以便滚动 */
+  }
+</style>
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <!-- 导航栏内容 -->
+  Navigation
+</nav>
+
+<div class="content">
+  <!-- 页面内容 -->
+</div>
+
+<script>
+  window.addEventListener('scroll', function() {
+    const navbar = document.getElementById('navbar');
+    // 当页面滚动超过100像素时，为导航栏添加scrolled类，否则移除scrolled类
+    if (window.scrollY > 100) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+  });
+</script>
+
+</body>
+</html>

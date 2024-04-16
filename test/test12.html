@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .red {
+            background-color: red;
+        }
+
+        .white {
+            background-color: white;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="menu">
+        <div class="mainbtn-menu">
+            <button id="classicBtn" class="classicmenu red">經典菜單</button>
+            <button id="selfBtn" class="selfmenu white">自己搭配!</button>
+        </div>
+        <div id="session1" class="session-menu">Session 1</div>
+        <div id="session2" class="session-menu hidden">Session 2</div>
+    </div>
+
+    <script>
+        const classicBtn = document.getElementById('classicBtn');
+        const selfBtn = document.getElementById('selfBtn');
+        const session1 = document.getElementById('session1');
+        const session2 = document.getElementById('session2');
+
+        classicBtn.addEventListener('click', function() {
+            classicBtn.classList.add('red');
+            classicBtn.classList.remove('white');
+            selfBtn.classList.add('white');
+            selfBtn.classList.remove('red');
+
+            session1.classList.remove('hidden');
+            session2.classList.add('hidden');
+        });
+
+        selfBtn.addEventListener('click', function() {
+            classicBtn.classList.add('white');
+            classicBtn.classList.remove('red');
+            selfBtn.classList.add('red');
+            selfBtn.classList.remove('white');
+
+            session1.classList.add('hidden');
+            session2.classList.remove('hidden');
+        });
+    </script>
+</body>
+</html>

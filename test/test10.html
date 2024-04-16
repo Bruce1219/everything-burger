@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scrollable Nav with Hamburger Menu</title>
+<style>
+    #navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #333;
+  z-index: 1000;
+}
+
+#navbar ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  overflow: hidden;
+}
+
+#navbar li {
+  float: left;
+}
+
+#navbar li a {
+  display: block;
+  padding: 20px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.content {
+  margin-top: 60px; /* Adjust based on the height of your nav */
+  width: 100%;
+  height: 2000px;
+  background-color: #fa0;
+}
+
+</style>
+</head>
+<body>
+
+<nav id="navbar">
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Services</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="content">
+  <!-- Your page content here -->
+</div>
+
+<script>
+    window.addEventListener('scroll', function() {
+  var navbar = document.getElementById('navbar');
+  if (window.scrollY > 50) { // Adjust as needed
+    navbar.style.top = '-60px'; // Adjust based on the height of your nav
+  } else {
+    navbar.style.top = '0';
+  }
+});
+
+</script>
+</body>
+</html>

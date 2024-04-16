@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image Slider</title>
+<style>
+  .slideshow-container {
+    max-width: 100%; /* 輪播容器的最大寬度 */
+    position: relative;
+    margin: auto;
+    overflow: hidden; /* 隱藏超出容器的內容 */
+  }
+
+  .slide {
+    position: absolute; /* 讓圖片疊在一起 */
+    width: 100%; /* 圖片填滿輪播容器 */
+    height: auto; /* 根據寬度自動調整高度 */
+    left: 0;
+    transition: transform 0.5s ease;
+  }
+
+  img {
+    width: 100%; /* 圖片填滿輪播容器 */
+    height: auto; /* 根據寬度自動調整高度 */
+    object-fit: cover; /* 確保圖片填滿並保持比例 */
+  }
+
+  .prev,
+  .next {
+    cursor: pointer;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    z-index: 1000; /* 將按鈕置於最上層 */
+    transform: translateY(-50%);
+  }
+
+  .prev {
+    left: 0;
+  }
+
+  .next {
+    right: 0;
+  }
+</style>
+</head>
+<body>
+
+<div class="slideshow-container">
+  <div class="slide">
+    <img src="image/menu-burger10.jpg">
+  </div>
+  <div class="slide">
+    <img src="image/menu-burger6.jpg">
+  </div>
+  <div class="slide">
+    <img src="image/menu-burger8.jpg">
+  </div>
+</div>
+
+<button class="prev" onclick="plusSlides(-1)">&#10094;</button>
+<button class="next" onclick="plusSlides(1)">&#10095;</button>
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function showSlides(n) {
+  const slides = document.querySelectorAll(".slide");
+  slideIndex += n;
+
+  if (slideIndex > slides.length) {
+    slideIndex = 1;
+  } else if (slideIndex < 1) {
+    slideIndex = slides.length;
+  }
+
+  for (let i = 0; i < slides.length; i++) {
+    const offset = (i - slideIndex + 1) * 100;
+    slides[i].style.transform = `translateX(${offset}%)`;
+  }
+}
+</script>
+
+</body>
+</html>
+

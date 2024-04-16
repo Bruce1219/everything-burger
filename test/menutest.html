@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <style>
+        .menu-content {
+    display: none;
+}
+
+.menu-content.active {
+    display: block;
+}
+
+    </style>
+</head>
+<body>
+    <button id="burgersBtn" onclick="showContent('burgers')">漢堡</button>
+    <button id="friesBtn" onclick="showContent('fries')">薯條</button>
+    <button id="piesBtn" onclick="showContent('pies')">派</button>
+    <button id="shakesBtn" onclick="showContent('shakes')">奶昔</button>
+    <button id="drinksBtn" onclick="showContent('drinks')">飲料</button>
+
+    <div id="burgersContent" class="menu-content active">
+        <p>漢堡</p>
+    </div>
+    <div id="friesContent" class="menu-content">
+        <p>薯條</p>
+    </div>
+    <div id="piesContent" class="menu-content">
+        <p>派</p>
+    </div>
+    <div id="shakesContent" class="menu-content">
+        <p>奶昔</p>
+    </div>
+    <div id="drinksContent" class="menu-content">
+        <p>飲料</p>
+    </div>
+
+    <script>
+        function showContent(category) {
+    // 隱藏所有內容
+    var contents = document.querySelectorAll('.menu-content');
+    contents.forEach(function(content) {
+        content.classList.remove('active');
+    });
+
+    // 顯示特定類別的內容
+    var selectedContent = document.getElementById(category + 'Content');
+    selectedContent.classList.add('active');
+}
+
+    </script>
+</body>
+</html>

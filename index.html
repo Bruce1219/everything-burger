@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVERYTHING BURGER Co.</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="grid.css">
+    <script src="https://kit.fontawesome.com/4a9c89e888.js" crossorigin="anonymous"></script>
+
+
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <a href="index.html" class="logo">
+            <img src="image/logo2.png" id="logo1" alt="logo">
+            <img src="image/logo7.png" id="logo2" alt="logo">
+        </a>
+        <ul class="nav-list" id="navList">
+            <li>
+                <a href="menu.html" class="nav-item">MENU</a>
+            </li>
+            <li>
+                <a href="#" class="nav-item">NEWS</a>
+            </li>
+            <li>
+                <a href="#" class="nav-item">LOCATIONS</a>
+            </li>
+            <li>
+                <a href="about.html" class="nav-item">ABOUT</a>
+            </li>
+            <li>
+                <a href="#" class="nav-item">CONTACT</a>
+            </li>
+            <li>
+                <a href="menu.html" class="nav-item" id="btn-white">ORDER</a>
+            </li>
+        </ul>
+        <button class="hb" id="toggleButton">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>   
+    <div class="header">
+        <div class="background-index">
+            <div class="box-screen-index"></div>
+        </div>
+        <div class="content-banner">
+            <div class="title-content-banner">
+                <h2>EVERYTHING</h2>
+                <h2>BURGER Co.</h2>
+            </div>
+            <div class="txt-content-banner">
+                <p>打造獨一無二，</p>
+                <p>自由搭配，</p>
+                <p>每口都是享受!</p>
+            </div>
+            <a href="menu.html" id="btn-red">ORDER NOW!</a>
+        </div>
+        <div class="social">
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-square-threads"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+    </div>
+    <div class="grid"></div>
+    <div class="menu">
+        <div class="session-menu">
+            <div class="container-menu">
+                <div class="title">
+                    <h2>MENU</h2>
+                </div>
+                <div class="type-menu">
+                    <ul>
+                        <li>
+                            <button id="burgersBtn" onclick="showContent('burgers')">
+                                BURGERS
+                            </button>
+                        </li>
+                        <li>
+                            <button id="friesBtn" onclick="showContent('fries')">
+                                FRIES
+                            </button>
+                        </li>
+                        <li>
+                            <button id="piesBtn" onclick="showContent('pies')">
+                                PIES
+                            </button>
+                        </li>
+                        <li><button id="drinksBtn" onclick="showContent('drinks')">
+                            DRINKS
+                        </button>
+                    </li>
+                        <li><button id="shakesBtn" onclick="showContent('shakes')">
+                            SHAKES
+                        </button>
+                    </li>
+                    </ul>
+                </div>
+                <div class="txt-menu">
+                    <h3>TOP 3</h3>
+                </div>
+                <div id="burgersContent" class="menu-content active">
+                    <div class="container">
+                        <div class="row row-cols-1 row-cols-md-3">
+                            <div class="col">
+                                <a href="#"class="wrap-menu">
+                                    <div class="card-menu">
+                                        <div class="pic-card">
+                                            <img src="image/menu-burger10.jpg" alt="burger1">
+                                        </div>
+                                        <div class="txt-card">
+                                            <h4>起司牛肉堡</h4>
+                                            <p>濃郁起司融入多汁牛肉，
+                                                每一口都是滋味的完美融合！
+                                            </p>
+                                        </div>
+                                        <div class="price-card">
+                                            <p>NT$ 150</p>
+                                            <button>
+                                                <i class="fa-solid fa-cart-shopping"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col">
+                                <a href="#" class="wrap-menu">
+                                    <div class="card-menu">
+                                        <div class="pic-card">
+                                            <img src="image/menu-burger8.jpg" alt="burger1">
+                                        </div>
+                                        <div class="txt-card">
+                                            <h4>花生醬牛肉堡</h4>
+                                            <p>柔軟牛肉，濃郁花生醬，口感層次豐富!
+                                            </p>
+                                        </div>
+                                        <div class="price-card">
+                                            <p>NT$ 160</p>
+                                            <button>
+                                                <i class="fa-solid fa-cart-shopping"></i>
+                                            </button>
+                                            
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col">
+                                <a href="menu-page.html" class="wrap-menu">
+                                    <div class="card-menu">
+                                        <div class="pic-card">
+                                            <img src="image/menu-burger6.jpg" alt="burger1">
+                                        </div>
+                                        <div class="txt-card">
+                                            <h4>雙層起司牛肉堡</h4>
+                                            <p>雙倍滋味，雙層享受！
+                                                讓您品味豐富多層次口感！
+                                            </p>
+                                        </div>
+                                        <div class="price-card">
+                                            <p>NT$ 200</p>
+                                            <button>
+                                                <i class="fa-solid fa-cart-shopping"></i>
+                                            </button>
+                                            
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="friesContent" class="menu-content">
+                    <div class="container">
+                        <div class="row row-cols-1 row-cols-md-3">
+                            <div class="col">
+                                <a href="#" class="wrap-menu">
+                                    <div class="card-menu">
+                                        <div class="pic-card">
+                                            <img src="image/fries1.jpg" alt="burger1">
+                                        </div>
+                                        <div class="txt-card">
+                                            <h4>經典薯條</h4>
+                                            <p>外酥內軟，經典風味，每一口都帶來滿滿的幸福感。
+                                            </p>
+                                        </div>
+                                        <div class="price-card">
+                                            <p>NT$ 60</p>
+                                            <button>
+                                                <i class="fa-solid fa-cart-shopping"></i>
+                                            </button>
+                                            
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col">
+                                <a href="#" class="wrap-menu">
+                                    <div class="card-menu">
+                                        <div class="pic-card">
+                                            <img src="image/fries2.jpg" alt="burger1">
+                                        </div>
+                                        <div class="txt-card">
+                                            <h4>松露薯條</h4>
+                                            <p>奢華松露風味，每一口都是高貴味蕾的享受。
+                                            </p>
+                                        </div>
+                                        <div class="price-card">
+                                            <p>NT$ 100</p>
+                                            <button>
+                                                <i class="fa-solid fa-cart-shopping"></i>
+                                            </button>
+                                            
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col">
+                                <a href="#" class="wrap-menu">
+                                    <div class="card-menu">
+                                        <div class="pic-card">
+                                            <img src="image/fries3.jpg" alt="burger1">
+                                        </div>
+                                        <div class="txt-card">
+                                            <h4>起司薯條</h4>
+                                            <p>濃郁起司包裹著金黃薯條，讓您沉浸在美味的海洋中。
+                                            </p>
+                                        </div>
+                                        <div class="price-card">
+                                            <p>NT$ 80</p>
+                                            <button>
+                                                <i class="fa-solid fa-cart-shopping"></i>
+                                            </button>
+                                            
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="piesContent" class="menu-content">
+                    <div class="container">
+                        <div class="row row-cols-1 row-cols-md-3">
+                            <div class="col">
+                                <a href="#" class="wrap-menu">
+                                    <div class="card-menu">
+                                        <div class="pic-card">
+                                            <img src="image/pie1.jpg" alt="burger1">
+                                        </div>
+                                        <div class="txt-card">
+                                            <h4>巧克力派</h4>
+                                            <p>濃郁巧克力，香氣四溢，每一口都是甜蜜的享受。
+                                            </p>
+                                        </div>
+                                        <div class="price-card">
+                                            <p>NT$ 100</p>
+                                            <button>
+                                                <i class="fa-solid fa-cart-shopping"></i>
+                                            </button>
+                                            
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col">
+                                <a href="#" class="wrap-menu">
+                                    <div class="card-menu">
+                                        <div class="pic-card">
+                                            <img src="image/pie2.jpg" alt="burger1">
+                                        </div>
+                                        <div class="txt-card">
+                                            <h4>蘋果派</h4>
+                                            <p>新鮮蘋果，酥脆外殼下藏著溫暖的果醬，令人愉悅。
+                                            </p>
+                                        </div>
+                                        <div class="price-card">
+                                            <p>NT$ 100</p>
+                                            <button>
+                                                <i class="fa-solid fa-cart-shopping"></i>
+                                            </button>
+                                            
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col">
+                                <a href="#" class="wrap-menu">
+                                    <div class="card-menu">
+                                        <div class="pic-card">
+                                            <img src="image/pie3.jpg" alt="burger1">
+                                        </div>
+                                        <div class="txt-card">
+                                            <h4>香蕉派</h4>
+                                            <p>香甜香蕉，輕柔口感帶來清爽的水果風味。
+                                            </p>
+                                        </div>
+                                        <div class="price-card">
+                                            <p>NT$ 100</p>
+                                            <button>
+                                                <i class="fa-solid fa-cart-shopping"></i>
+                                            </button>
+                                            
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="drinksContent" class="menu-content">
+                    <div class="container">
+                        <div class="row row-cols-1 row-cols-md-3">
+                            <div class="col">
+                                <a href="#" class="wrap-menu">
+                                    <div class="card-menu">
+                                        <div class="pic-card">
+                                            <img src="image/drink1.jpg" alt="burger1">
+                                        </div>
+                                        <div class="txt-card">
+                                            <h4>可口可樂</h4>
+                                            <p>經典氣泡，爽口解渴，一飲而盡。
+                                            </p>
+                                        </div>
+                                        <div class="price-card">
+                                            <p>NT$ 50</p>
+                                            <button>
+                                                <i class="fa-solid fa-cart-shopping"></i>
+                                            </button>
+                                            
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col">
+                                <a href="#" class="wrap-menu">
+                                    <div class="card-menu">
+                                        <div class="pic-card">
+                                            <img src="image/drink2.jpg" alt="burger1">
+                                        </div>
+                                        <div class="txt-card">
+                                            <h4>焦糖冰奶茶</h4>
+                                            <p>香濃甜蜜，冰涼清爽，醇香滋味。
+                                            </p>
+                                        </div>
+                                        <div class="price-card">
+                                            <p>NT$ 50</p>
+                                            <button>
+                                                <i class="fa-solid fa-cart-shopping"></i>
+                                            </button>
+                                            
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col">
+                                <a href="#" class="wrap-menu">
+                                    <div class="card-menu">
+                                        <div class="pic-card">
+                                            <img src="image/drink3.jpg" alt="burger1">
+                                        </div>
+                                        <div class="txt-card">
+                                            <h4>冰紅茶</h4>
+                                            <p>清涼怡人，純淨清新，解渴又健康。
+                                            </p>
+                                        </div>
+                                        <div class="price-card">
+                                            <p>NT$ 50</p>
+                                            <button>
+                                                <i class="fa-solid fa-cart-shopping"></i>
+                                            </button>
+                                            
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="shakesContent" class="menu-content">
+                    <div class="container">
+                        <div class="row row-cols-1 row-cols-md-3">
+                            <div class="col">
+                                <a href="#" class="wrap-menu">
+                                    <div class="card-menu">
+                                        <div class="pic-card">
+                                            <img src="image/shakes1.jpg" alt="burger1">
+                                        </div>
+                                        <div class="txt-card">
+                                            <h4>巧克力奶昔</h4>
+                                            <p>濃郁可口，每一口都充滿著滑順的巧克力風味。
+                                            </p>
+                                        </div>
+                                        <div class="price-card">
+                                            <p>NT$ 110</p>
+                                            <button>
+                                                <i class="fa-solid fa-cart-shopping"></i>
+                                            </button>
+                                            
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col">
+                                <a href="#" class="wrap-menu">
+                                    <div class="card-menu">
+                                        <div class="pic-card">
+                                            <img src="image/shakes2.jpg" alt="burger1">
+                                        </div>
+                                        <div class="txt-card">
+                                            <h4>香草奶昔</h4>
+                                            <p>香氣撲鼻，讓您感受到一絲絲清涼的清爽。
+                                            </p>
+                                        </div>
+                                        <div class="price-card">
+                                            <p>NT$ 100</p>
+                                            <button>
+                                                <i class="fa-solid fa-cart-shopping"></i>
+                                            </button>
+                                            
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col">
+                                <a href="#" class="wrap-menu">
+                                    <div class="card-menu">
+                                        <div class="pic-card">
+                                            <img src="image/shakes3.jpg" alt="burger1">
+                                        </div>
+                                        <div class="txt-card">
+                                            <h4>草莓奶昔</h4>
+                                            <p>鮮甜多汁，口感滑順，帶來草莓的天然酸甜。
+                                            </p>
+                                        </div>
+                                        <div class="price-card">
+                                            <p>NT$ 110</p>
+                                            <button>
+                                                <i class="fa-solid fa-cart-shopping"></i>
+                                            </button>
+                                            
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="btn-menu">
+                    <a href="menu.html" id="btn-red">MORE</a>
+                </div>
+                <div class="straightbox-red"></div>
+                <div class="straightbox-red-long"></div>
+            </div>
+            <div class="cart">
+                <a href="#">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="grid"></div>
+    <div class="newssec">
+        <div class="sessions-newssec">
+            <div class="content-left-newssec">
+                <div class="title">
+                    <h2>NEWS</h2>
+                </div>
+                <div class="scrolling-object-container">
+                    <div class="scrolling-object">
+                        <div class="logostream">
+                            <img src="image/logo3.png" alt="logos" class="logos">
+                            <img src="image/logo4.png" alt="logos" class="logos">
+                            <img src="image/logo5.png" alt="logos" class="logos">
+                            <img src="image/logo6.png" alt="logos" class="logos">
+                            <img src="image/logo7.png" alt="logos" class="logos">
+                        </div>  
+                    </div>
+                </div>
+            </div>
+            <div class="content-right-newssec">
+                <div class="slide-news">
+                    <a href="#">
+                        <img src="image/news-burger.jpg" alt="">
+                        <div class="txt-slide">
+                            <h4>新口味即將上市!</h4>
+                            <p>全新滋味，十足驚艷，品味不同的漢堡饗宴，絕對讓您驚喜連連！</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="slide-news">
+                    <a href="#">
+                        <img src="image/news-burger2.jpg" alt="">
+                        <div class="txt-slide">
+                            <h4>漢堡之王誕生！</h4>
+                            <p>我們欣喜地宣布，EVERYTHING被評為台灣年度最佳餐廳！</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="slide-news">
+                    <a href="#">
+                        <img src="image/news-burger3.jpg" alt="">
+                        <div class="txt-slide">
+                            <h4>超值優惠來襲！</h4>
+                            <p>為了感謝您們的支持與厚愛，超值優惠來襲！</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="slide-news">
+                    <a href="#">
+                        <img src="image/news-burger4.jpg" alt="">
+                        <div class="txt-slide">
+                            <h4>EVERYTHING巧克力派推出!</h4>
+                            <p>每一口都充滿著濃郁的甜蜜誘惑！</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="slide-news">
+                    <a href="#">
+                        <img src="image/news-burger5.jpg" alt="">
+                        <div class="txt-slide">
+                            <h4>EVERYTHING奶昔新品上市</h4>
+                            <p>口感絲滑，帶您品味夏日清涼！</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="slide-news">
+                    <a href="#">
+                        <img src="image/news-burger6.jpg" alt="">
+                        <div class="txt-slide">
+                            <h4>推出全新創意配料!</h4>
+                            <p>我們引以為傲地推出了全新創意配料，讓您的漢堡體驗更加多姿多彩！</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="grid"></div>
+    <div class="about">
+        <div class="session-about">
+            <div class="title title-about">
+                <h2>ABOUT</h2>
+            </div>
+            <div class="content-about">
+                <div class="wrap-about">
+                    <div class="pic-about">
+                        <img src="image/about.jpg" alt="img">
+                    </div>
+                    <div class="txt-about">
+                        <div>
+                            <h4>我們的理念</h4>
+                            <p>我們致力於打造一個自由搭配的美式漢堡店，提供多樣化的主要漢堡選項，讓客人可以根據個人口味和偏好自由選擇配料。我們以新鮮、高品質的食材為基礎，注重創新和多樣性，並致力於提供溫馨舒適的用餐環境和優質的服務。</p>
+                            <a href="about.html" class="btn-about" id="btn-red">MORE</a>
+                        </div>
+                    </div>                        
+                </div>
+                <!-- <div class="box-about"></div> -->
+                
+                
+            </div>
+        </div>
+        
+    </div>
+    <div class="grid"></div>
+    <div class="location">  
+        <div class="box-location"></div>
+        <div class="session-location">
+            <div class="content-location">
+                <div class="title">
+                    <h2>LOCATION</h2>
+                </div>
+                <div class="wrap-location">
+                    <div class="map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3617.2490359444023!2d121.2224477743517!3d24.957640341363952!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346823ea50c732a5%3A0x1b5e6ee66e9fec49!2z57ev6IKyVGliYU1l6ZmE6Kit5Lit5aOi6IG36KiT5Lit5b-D!5e0!3m2!1szh-TW!2stw!4v1712840298397!5m2!1szh-TW!2stw"style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <div class="info-location">
+                        <div class="item-location">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <p>320桃園市中壢區復興路46號</p>
+                        </div>
+                        <div class="item-location">
+                            <i class="fa-solid fa-phone"></i>
+                            <p>03-425-1108</p>
+                        </div>
+                        <div class="item-location">
+                            <i class="fa-solid fa-clock"></i>
+                            <div class="time-location">
+                                <p>Wed-Sun</p>
+                                <p>11:30-14:30</p>
+                                <p>17:00-21:00</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+    </div>
+    <div class="footer">
+        <div class="info-footer">
+            <div class="list-footer">
+                <a href="#" class="item-footer">MENU</a>
+                <a href="#" class="item-footer">NEWS</a>
+                <a href="#" class="item-footer">LOCATION</a>
+                <a href="#" class="item-footer">ABOUT</a>
+                <a href="#" class="item-footer">CONTACT</a>
+            </div>
+            <div class="logo-footer">
+                <div class="logo">
+                    <a href="#">
+                        <img src="image/logo2.png" alt="logo">
+                    </a>
+                </div>
+                <div class="social-footer">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-square-threads"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+                
+            </div>
+        </div>
+        <div class="txt-footer">
+            <div class="contact-footer">
+                <i class="fa-solid fa-phone"></i>
+                <p>03-425-1108</p>
+            </div>
+            <div class="contact-footer">
+                <i class="fa-solid fa-location-dot"></i>
+                <p>320桃園市中壢區復興路46號</p>
+            </div>
+            <div class="right-footer">
+                <p>@copyright©2024 EVERYTHING BURGER CO . All rights reserved. </p>
+            </div>
+        </div>
+        
+    </div>
+    <button onclick="scrollToTop()" id="scrollToTopBtn" title="返回頂部">
+        <i class="fa-solid fa-chevron-up"></i>
+    </button>
+
+
+    <script src="news.js"></script>
+    <script src="javascript.js"></script>
+</body>
+</html>

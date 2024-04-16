@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image Slider</title>
+<style>
+    .slideshow-container {
+    max-width: 600px; /* 輪播容器的最大寬度 */
+    position: relative;
+    margin: auto;
+    overflow: hidden; /*隱藏超出容器的內容*/
+    }
+
+    .slide {
+    position: absolute; /*讓圖片疊在一起*/
+    display: none; /*隱藏所有輪播圖片*/
+    }
+
+    img {
+    width: 100%; /* 圖片填滿輪播容器 */
+    height: auto; /* 根據寬度自動調整高度 */
+    }
+
+    .prev,
+    .next {
+    cursor: pointer;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    z-index: 1000; /* 將按鈕置於最上層 */
+    }
+    .prev {
+    left: 0;
+    }
+
+    .next {
+    right: 0;
+    }
+</style>
+</head>
+<body>
+
+<div class="slideshow-container">
+    <div class="slide">
+        <img src="https://picsum.photos/1000/800/?random=10">
+    </div>
+    <div class="slide">
+        <img src="https://picsum.photos/1000/800/?random=1">
+    </div>
+    <div class="slide">
+        <img src="https://picsum.photos/1000/800/?random=19">
+    </div>
+</div>
+
+<button class="prev" onclick="plusSlides(-1)">&#10094;</button>
+<button class="next" onclick="plusSlides(1)">&#10095;</button>
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
+
+function showSlides(n) {
+    let i;
+    const slides = document.getElementsByClassName("slide");
+    if (n > slides.length) {slideIndex = 1}    
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+    slides[slideIndex-1].style.display = "block";  
+}
+</script>
+
+</body>
+</html>

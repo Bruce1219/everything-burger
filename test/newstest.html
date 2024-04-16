@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .out{
+            width: 100%;
+            height: 20000px;
+            background-color: #eee;
+            position: relative;
+        }
+        .in{
+            width: 700px;
+            height: 20000px;
+            position: sticky;
+            background-color: red;
+            /* overflow: hidden; */
+        }
+        .scrolling-object-container {
+            overflow-x: scroll; /* 設置為水平滾動 */
+            overflow-y: hidden; /* 隱藏垂直滾動條 */
+            white-space: nowrap; /*防止內容折行*/
+            width: 100%;/*設置容器寬度*/
+            position: sticky;
+            top: 100px;
+            left: 0;
+        }
+        .scrolling-object-container::-webkit-scrollbar {
+            display: none; /* 隱藏滾動條 */
+        }
+        .scrolling-object {
+            width: 900px;
+            display: inline-block; /* 內容以行內元素顯示 */
+        }
+        .scrolling-object img{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="out">
+        <div class="in">
+            <div class="scrolling-object-container">
+                <div class="scrolling-object">
+                    <img src="https://picsum.photos/300/200/?random=10">
+                <!-- 這裡放置你想要滾動的內容 -->
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+    <script>
+        // 在滾動時移動物件
+window.addEventListener('scroll', function() {
+  var scrollingObject = document.querySelector('.scrolling-object');
+  var scrollPercentage = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight);
+  var containerWidth = document.querySelector('.scrolling-object-container').offsetWidth;
+  var maxScroll = containerWidth - scrollingObject.offsetWidth;
+  var scrollAmount = maxScroll * scrollPercentage * 10;
+  scrollingObject.style.transform = 'translateX(' + scrollAmount + 'px)';
+});
+
+    </script>
+</body>
+</html>
