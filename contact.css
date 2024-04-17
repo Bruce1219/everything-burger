@@ -30,7 +30,10 @@
 .wrap-contact input{
     border: solid 1px #595959;
     border-radius: 10px;
+    padding: 0 5px;
+    outline: none;
 }
+
 .name-number{
     display: flex;
     margin: 50px 0 20px;
@@ -41,7 +44,7 @@
 .name-number input{
     width: 300px;
     height:30px;
-    margin: 5px 30px;
+    margin: 5px 25px;
 }
 .mail p{
     margin: 0 30px;
@@ -52,15 +55,17 @@
     margin: 5px 30px 20px;
 }
 .opinion p{
-    margin: 0 30px;
+    margin: 5px 0;
 }
-.opinion input{
-    width: 660px;
-    height:200px;
-    margin: 5px 30px 20px;
+.opinion textarea{
+    border: solid 1px #595959;
+    border-radius: 10px;
+    outline: none;
+    width: 650px;
+    padding: 5px 10px;
 }
 .wrap-contact button{
-    margin: 0 0 30px;
+    margin: 20px 0 30px;
 }
 .info-contact{
     width: 100%;
