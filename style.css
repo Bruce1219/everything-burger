@@ -155,7 +155,6 @@ body{
 .content-banner h2{
     color: #fff;
     font-size: 40px;
-    font-family: noto sans;
     font-weight: bold;
     letter-spacing: 1px;
     margin: 0 0 10px;
@@ -163,7 +162,6 @@ body{
 .content-banner p{
     color: #fff;
     font-size: 18px;
-    font-family: noto sans;
     font-weight: bold;
     letter-spacing: 2px;
     margin: 5px 0 ;
@@ -176,7 +174,6 @@ body{
     padding: 0 3px;
 }
 #btn-red{
-    font-family: noto sans;
     font-size: 16px;
     text-decoration: none;
     font-weight: bolder;
@@ -223,7 +220,6 @@ body{
     margin: 0 20px;
 }
 .red{
-    font-family: noto sans;
     font-size: 16px;
     text-decoration: none;
     font-weight: bolder;
@@ -241,7 +237,6 @@ body{
     border: solid 1px #EB2222;
 }
 .white{
-    font-family: noto sans;
     font-size: 16px;
     text-decoration: none;
     letter-spacing: 1px;
@@ -314,7 +309,6 @@ body{
     text-decoration: none;
 }
 .title{
-    font-family: noto sans;
     font-weight: bold;
     color: #000;
     font-size: 36px;
@@ -335,7 +329,6 @@ body{
     border: none;
     background-color: #fff;
     color: #595959;
-    font-family: noto sans;
     font-size: 16px;
     font-weight: bold;
     letter-spacing: 1px;
@@ -351,7 +344,6 @@ body{
     border-bottom: 2px solid #EB2222; /* 修改這裡的顏色和粗細 */
 }
 .txt-menu{
-    font-family: noto sans;
     font-size: 30px;
     font-weight: bold;
     letter-spacing: 1px;
@@ -386,7 +378,6 @@ body{
     scale: 1.2;
 }
 .txt-card{
-    font-family: noto sans;
     letter-spacing: 2px;
 }
 .txt-card h4{
@@ -405,7 +396,6 @@ body{
     display: flex;
     justify-content: space-between;
     margin: 20px 10px;
-    font-family: noto sans;
     letter-spacing: 1px;
     font-weight: bold;
     font-size: 20px;
