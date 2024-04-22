@@ -203,11 +203,37 @@ body{
     scale: 1.5;
     margin: 15px 0;
 }
+/* --------------grid---------------- */
 .grid{
     width: 100%;
-    height: 105px;
-    background-image: url(image/Frame\ 3.png);
-    background-repeat: repeat;
+    display: flex;
+    background-color: #eee;
+}
+.longbox{
+    width: 10%;
+}
+.red-long{
+    width: 100%;
+    background-color: #eb2222;
+    height: 30px;
+}
+.white-long{
+    width: 100%;
+    background-color: #fff;
+    height: 30px;
+}
+.shortbox{
+    width:8%;
+}
+.red-short{
+    width: 100%;
+    background-color: #eb2222;
+    height: 30px;
+}
+.white-short{
+    width: 100%;
+    background-color: #fff;
+    height: 30px;
 }
 /* --------------menu部分----------------- */
 .mainbtn-menu{
