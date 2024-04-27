@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>滾動式動畫</title>
+    <style>
+        .animation-element {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0; /* 初始設置為不可見 */
+        transition: opacity 0.5s ease; /* 定義淡入淡出效果 */
+        }
+        .content{
+            width: 100%;
+            height: 200vh;
+            background-color: antiquewhite;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="animation-element">
+        <img src="https://picsum.photos/300/200/?random=10">
+    </div>
+    <div class="content">
+        <!-- 其他內容 -->
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+    var animationElement = document.querySelector('.animation-element');
+    var content = document.querySelector('.content');
+
+    window.addEventListener('scroll', function() {
+        var scrollPosition = window.scrollY;
+        var contentPosition = content.offsetTop;
+
+        if (scrollPosition > contentPosition) {
+            animationElement.style.opacity = '1'; // 滾動到內容後顯示動畫
+        } else {
+            animationElement.style.opacity = '0'; // 否則隱藏動畫
+        }
+    });
+});
+
+    </script>
+</body>
+</html>
