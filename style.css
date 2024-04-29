@@ -816,13 +816,7 @@ body{
     display: flex;
     margin: 30px 0;
 }
-.info-location{
-    display: flex;
-    flex-direction: column;
-    align-items:flex-start ;
-    justify-content: center;
-    /* padding: 0 20px; */
-}
+
 .map{
     margin: 0 50px;
 }
@@ -830,6 +824,13 @@ body{
     width: 400px;
     height: 300px;
     border-radius: 20px;
+}
+.info-location{
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start ;
+    justify-content: center;
+    /* padding: 0 20px; */
 }
 .info-location i{
     color: #EB2222;
@@ -849,6 +850,9 @@ body{
 .fa-clock{
     padding: 10px 0 0;
 }
+
+/* ----------footer---------- */
+
 .footer{
     width: 100%;
     background-color: #EB2222;
